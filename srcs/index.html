@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html" charset="UTF-8">
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h1>FT_SERVER</h1>
+            <h3>Your first web server is alive !</h3>
+        </div>
+        <hr>
+        <br>
+        <div style="margin:0 10%; text-align:justify">
+            <h3>Introduction</h3>
+            <p>Ce sujet a pour but de vous faire découvir découvrir l’administration système en vous
+            sensibilisant à l’importance de l’utilisation de scripts pour automatiser vos taches. Pour ce
+            faire, nous allons vous faire découvrir la technologie "Docker" afin de vous faire installer
+            un server web complet, qui sera capable de faire tourner plusieurs services, tel qu’un
+            Wordpress, Phpmyadmin, ainsi qu’une base de donnée.</p>
+        </div>
+        <div style="margin:0 10%; text-align:justify">
+            <h3>Consignes générales</h3>
+            <ul>
+                <li>Vous devez rendre tous les fichiers nécessaires a la configuration de votre serveur
+                dans un dossier srcs.</li>
+                <li>Votre fichier Dockerfile devra se trouver à la racine de votre repo. Celui-ci
+                uniquement servira à build votre container. Vous n’avez donc pas le droit à dockercompose.</li>
+                <li>Tous les fichiers nécessaires à votre wordpress devront être dans les sources.</li>
+            </ul>
+        </div>
+        <div style="margin:0 10%; text-align:justify">
+            <h3>Partie obbligatoire</h3>
+            <ul>
+                <li>Vous devrez, dans un seul container Docker, mettre en place un serveur web avec
+                Nginx. Le container devra tourner avec Debian Buster.</li>
+                <li>Votre serveur devra être capable de faire tourner plusieurs services en même temps.
+                Les services seront un Wordpress à installer par vous même, ainsi que Phpmyadmin
+                et MySQL. Vous devrez vous assurer que votre base de donnée SQL fonctionne
+                avec le wordpress et phpmyadmin.</li>
+                <li>Votre serveur devra pouvoir, quand c’est possible, utiliser le protocole SSL.</li>
+                <li>Vous devrez vous assurer que, selon l’url tapé, votre server redirige vers le bon
+                site.</li>
+                <li>Vous devrez aussi vous assurer que votre serveur tourne avec un index automatique
+                qui doit pouvoir être désactivable.</li>
+            </ul>
+        </div>
+    </body>
+</html>
