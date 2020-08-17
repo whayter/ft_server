@@ -1,5 +1,5 @@
 FROM debian:buster
-LABEL Maintainer: Winston Hayter <hwinston@student.42.fr>
+LABEL maintainer="Winston Hayter <hwinston@student.42.fr>"
 
 RUN apt-get update -qy \
 && apt-get upgrade -qy \
