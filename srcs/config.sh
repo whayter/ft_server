@@ -10,6 +10,8 @@ service nginx start
 service mysql start
 service php7.3-fpm start
 
+chown -R www-data: $ROOT
+
 # install wordpress
 wget -c $WP -O - | tar -xz -C $ROOT
 chown -R www-data: $ROOT/wordpress
@@ -22,13 +24,13 @@ chown -R www-data: $ROOT/phpmyadmin
 # server configuration
 if  [ $AUTO_INDEX = "off" ]
 then
-    sed -i 's/autoindex on;/autoindex off;/g' srcs_docker/nginx-block
+    sed -i 's/autoindex on;/autoindex off;\n\troot \/var\/www\/html;/g' srcs_docker/nginx-block
 fi
 cp srcs_docker/nginx-block /etc/nginx/sites-available/nginx-block
 ln -s /etc/nginx/sites-available/nginx-block  /etc/nginx/sites-enabled/nginx-block
 rm -rf /etc/nginx/sites-enabled/default
 
-rm $ROOT/html/*
+rm $ROOT/html/index.nginx-debian.html
 mv srcs_docker/index.html $ROOT/html
 
 # SSL configuration
