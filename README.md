@@ -12,7 +12,7 @@ sudo chmod 666 /var/run/docker.sock
 docker build -t test .
 ```
 
-* Nginx may already be turned on on th virtual machine and occupy port 80. If so, run:
+* Nginx may already be running on the virtual machine and occupy port 80. If so, run:
 ```
 service nginx stop
 ```
