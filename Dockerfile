@@ -7,7 +7,7 @@ RUN apt-get update -qy \
 
 COPY ./srcs/* srcs_docker/
 
-EXPOSE 8080
+EXPOSE 80
 EXPOSE 443
 
 RUN chmod +x ./srcs_docker/config.sh

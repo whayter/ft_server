@@ -13,11 +13,15 @@ docker build -t test .
 ```
 
 * Run a Docker container derived from the image:
+As Nginx may already running on the virtual machine, you can either:
+```service nginx stop
+``` and then ``` docker run --rm -it -p 80:80 -p 443:443 test
 ```
-docker run --rm -it -p 8080:8080 -p 443:443 test
+OR ```
+docker run --rm -it -p 8080:80 -p 443:443 test
 ```
 
 * Disable the automatic index:
 ```
-docker run --rm -it -e AUTO_INDEX=off -p 8080:8080 -p 443:443 test
+docker run --rm -it -e AUTO_INDEX=off -p 8080:80 -p 443:443 test
 ```
