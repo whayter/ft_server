@@ -12,12 +12,16 @@ sudo chmod 666 /var/run/docker.sock
 docker build -t test .
 ```
 
-* Run a Docker container derived from the image:
-As Nginx may already running on the virtual machine, you can either:
-```service nginx stop
-``` and then ``` docker run --rm -it -p 80:80 -p 443:443 test
+* Since Nginx may already run on the virtual machine, there are two options to run the container derived from the image:
+--> Option 1:
 ```
-OR ```
+service nginx stop
+``` and then
+```
+docker run --rm -it -p 80:80 -p 443:443 test
+```
+--> option 2:
+```
 docker run --rm -it -p 8080:80 -p 443:443 test
 ```
 
