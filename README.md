@@ -10,4 +10,4 @@ This project is intended to introduce you to the basics of system and network ad
     - Option 1: `service nginx stop` and then `docker run --rm -it -p 80:80 -p 443:443 test`
     - option 2: `docker run --rm -it -p 8080:80 -p 443:443 test`
 
-* Disable the automatic index: `docker run --rm -it -e AUTO_INDEX=off -p 80:80 -p 443:443 test` or `docker run --rm -it -e AUTO_INDEX=off -p 8080:80 -p 443:443 test` depending on previous step
+* Disable the automatic index: use `-e AUTO_INDEX=off` when running docker
